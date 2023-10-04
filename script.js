@@ -144,7 +144,7 @@ function displayRecipes(recipes) {
         const likeButton = document.createElement("span");
         likeButton.classList.add("like-button");
         likeButton.textContent = recipe.isLiked ? "❤️ Liked" : "🤍 Like";
-        likeButton.addEventListener("click", () => {git 
+        likeButton.addEventListener("click", () => {
             recipe.isLiked = !recipe.isLiked;
             likeButton.textContent = recipe.isLiked ? "❤️ Liked" : "🤍 Like";
             likeButton.classList.toggle("is-liked", recipe.isLiked);
