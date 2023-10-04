@@ -136,14 +136,15 @@ const recipes= [
 function displayRecipes(recipes) {
     recipeList.innerHTML = "";
     recipes.forEach(recipe => {
-         recipeDiv.textContent = recipe.name;
+         
         const recipeDiv = document.createElement("div");
+        recipeDiv.textContent = recipe.name;
         recipeDiv.textContent = recipe.name;
         recipeDiv.classList.add("recipe");
         const likeButton = document.createElement("span");
         likeButton.classList.add("like-button");
         likeButton.textContent = recipe.isLiked ? "❤️ Liked" : "🤍 Like";
-        likeButton.addEventListener("click", () => {
+        likeButton.addEventListener("click", () => {git 
             recipe.isLiked = !recipe.isLiked;
             likeButton.textContent = recipe.isLiked ? "❤️ Liked" : "🤍 Like";
             likeButton.classList.toggle("is-liked", recipe.isLiked);
